@@ -1,0 +1,9 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# (Optional) If this is a single-page app, add a redirect so all routes serve index.html:
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
