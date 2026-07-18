@@ -1,13 +1,675 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>F1 Academy</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>F1 Academy</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="./src/style.css">
+
+</head>
+
+<body>
+
+<!-- ========================= -->
+<!-- NAVBAR -->
+<!-- ========================= -->
+
+<nav class="navbar">
+
+<div class="logo">
+
+F1 <span>Academy</span>
+
+</div>
+
+<div class="nav-links">
+
+<a href="#" data-scroll="hero">Home</a>
+
+<a href="#" data-scroll="starting-grid">
+Starting Grid
+</a>
+
+<a href="#" data-scroll="pitcrew">
+Pit Crew
+</a>
+
+<a href="#" data-scroll="aerodynamics">
+Aerodynamics
+</a>
+
+<a href="#" data-scroll="anatomy">
+Car Anatomy
+</a>
+
+<a href="#" data-scroll="rules">
+Rules
+</a>
+
+<a href="#" data-scroll="teams">
+Teams
+</a>
+
+<a href="#" data-scroll="drivers">
+Drivers
+</a>
+
+<a href="#" data-scroll="quiz">
+Quiz
+</a>
+
+</div>
+
+</nav>
+
+<!-- ========================= -->
+<!-- HERO -->
+<!-- ========================= -->
+
+<section id="hero" class="hero">
+
+<div class="hero-overlay"></div>
+
+<div class="hero-content">
+
+<h1>
+
+Learn
+<span>Formula 1</span>
+
+</h1>
+
+<p>
+
+Everything about Formula 1,
+from complete beginners
+to future engineers.
+
+</p>
+
+<button data-scroll="starting-grid">
+
+Start Learning
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- STARTING GRID -->
+<!-- ========================= -->
+
+<section id="starting-grid" class="section">
+
+<h2 class="section-title">
+
+Starting <span>Grid</span>
+
+</h2>
+
+<p class="section-description">
+
+Before every Formula 1 race,
+drivers qualify to determine
+their starting positions.
+
+Pole Position is awarded to
+the fastest driver in qualifying.
+
+</p>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>Pole Position</h3>
+
+<p>
+
+The fastest qualifying lap starts
+from P1.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Formation Lap</h3>
+
+<p>
+
+Drivers complete one lap before
+the race officially starts.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Five Red Lights</h3>
+
+<p>
+
+When all five lights go out,
+the Grand Prix begins.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Grid Penalties</h3>
+
+<p>
+
+Drivers can receive penalties
+that move them backwards.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+<!-- ========================= -->
+<!-- PIT CREW -->
+<!-- ========================= -->
+
+<section id="pitcrew" class="section">
+
+<h2 class="section-title">
+
+Pit <span>Crew</span>
+
+</h2>
+
+<p class="section-description">
+
+A Formula 1 pit stop is one of the fastest
+team operations in the world.
+Every mechanic has one important job.
+
+</p>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>Front Jack</h3>
+
+<p>
+
+Lifts the front of the car before
+the tyres are changed.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Rear Jack</h3>
+
+<p>
+
+Raises the rear of the car and
+lowers it after the stop.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Tyre Gun Operators</h3>
+
+<p>
+
+Remove and tighten the wheel nuts
+using high-speed pneumatic guns.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Tyre Changers</h3>
+
+<p>
+
+Remove old tyres and fit
+a fresh set.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Wing Mechanics</h3>
+
+<p>
+
+Replace damaged front wings
+if required.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Release Controller</h3>
+
+<p>
+
+Signals when the driver can
+leave the pit box safely.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- AERODYNAMICS -->
+<!-- ========================= -->
+
+<section id="aerodynamics" class="section">
+
+<h2 class="section-title">
+
+<span>Aero</span>dynamics
+
+</h2>
+
+<p class="section-description">
+
+Aerodynamics controls how air moves
+around the car, producing downforce
+while reducing drag.
+
+</p>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>Front Wing</h3>
+
+<p>
+
+Controls airflow around the front tyres
+and generates front downforce.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Floor</h3>
+
+<p>
+
+Creates ground effect which generates
+most of the car's grip.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Sidepods</h3>
+
+<p>
+
+Guide airflow while cooling
+the power unit.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Rear Wing</h3>
+
+<p>
+
+Creates rear downforce and houses
+the DRS flap.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- CAR ANATOMY -->
+<!-- ========================= -->
+
+<section id="anatomy" class="section">
+
+<h2 class="section-title">
+
+Car <span>Anatomy</span>
+
+</h2>
+
+<p class="section-description">
+
+Click any button below to learn
+about each Formula 1 car component.
+
+</p>
+
+<div class="car-anatomy">
+
+<img
+src="./src/image/F1CarAnatomy.jpeg"
+class="car-image"
+alt="Formula 1 Car">
+
+<div class="part-card">
+
+<h2 id="part-title">
+
+Front Wing
+
+</h2>
+
+<p>
+
+<strong>Function</strong>
+
+</p>
+
+<p id="part-function">
+
+Loading...
+
+</p>
+
+<p>
+
+<strong>Location</strong>
+
+</p>
+
+<p id="part-location">
+
+Loading...
+
+</p>
+
+<p>
+
+<strong>Category</strong>
+
+</p>
+
+<p id="part-category">
+
+Loading...
+
+</p>
+
+<div class="part-buttons">
+
+<button data-part="frontWing">
+
+Front Wing
+
+</button>
+
+<button data-part="halo">
+
+Halo
+
+</button>
+
+<button data-part="sidepod">
+
+Sidepods
+
+</button>
+
+<button data-part="floor">
+
+Ground Effect Floor
+
+</button>
+
+<button data-part="rearWing">
+
+Rear Wing
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ========================= -->
+<!-- RULES -->
+<!-- ========================= -->
+
+<section id="rules" class="section">
+
+<h2 class="section-title">
+
+Formula 1 <span>Rules</span>
+
+</h2>
+
+<p class="section-description">
+
+Formula 1 follows strict sporting and
+technical regulations to ensure fair,
+safe and competitive racing.
+
+</p>
+
+<div class="cards">
+
+<div class="card">
+<h3>Yellow Flag</h3>
+<p>Slow down. Overtaking is not allowed.</p>
+</div>
+
+<div class="card">
+<h3>Red Flag</h3>
+<p>The race is stopped due to dangerous conditions.</p>
+</div>
+
+<div class="card">
+<h3>Blue Flag</h3>
+<p>A slower driver must allow a faster car to pass.</p>
+</div>
+
+<div class="card">
+<h3>Safety Car</h3>
+<p>The field slows down while marshals clear incidents.</p>
+</div>
+
+<div class="card">
+<h3>Track Limits</h3>
+<p>Drivers must stay within the white lines.</p>
+</div>
+
+<div class="card">
+<h3>Penalties</h3>
+<p>Drivers can receive time or grid penalties for breaking rules.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- TEAMS -->
+<!-- ========================= -->
+
+<section id="teams" class="section">
+
+<h2 class="section-title">
+
+2026 <span>Teams</span>
+
+</h2>
+
+<div class="cards">
+
+<div class="card"><h3>McLaren</h3></div>
+<div class="card"><h3>Ferrari</h3></div>
+<div class="card"><h3>Red Bull Racing</h3></div>
+<div class="card"><h3>Mercedes</h3></div>
+<div class="card"><h3>Aston Martin</h3></div>
+<div class="card"><h3>Alpine</h3></div>
+<div class="card"><h3>Williams</h3></div>
+<div class="card"><h3>Racing Bulls</h3></div>
+<div class="card"><h3>Sauber</h3></div>
+<div class="card"><h3>Haas</h3></div>
+<div class="card"><h3>Cadillac</h3></div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- DRIVERS -->
+<!-- ========================= -->
+
+<section id="drivers" class="section">
+
+<h2 class="section-title">
+
+Formula 1 <span>Drivers</span>
+
+</h2>
+
+<p class="section-description">
+
+Learn about every Formula 1 driver's
+career, team and achievements.
+
+</p>
+
+<div class="cards">
+
+<div class="cards">
+
+<div class="card"><h3>Oscar Piastri</h3></div>
+<div class="card"><h3>Lando Norris</h3></div>
+
+<div class="card"><h3>Charles Leclerc</h3></div>
+<div class="card"><h3>Lewis Hamilton</h3></div>
+<div class="card"><h3>Max Verstappen</h3></div>
+<div class="card"><h3>Isack Hadjar</h3></div>
+<div class="card"><h3>George Russell</h3></div>
+<div class="card"><h3>Andrea Kimi Antonelli</h3></div>
+<div class="card"><h3>Fernando Alonso</h3></div>
+<div class="card"><h3>Lance Stroll</h3></div>
+<div class="card"><h3>Pierre Gasly</h3></div>
+<div class="card"><h3>Franco Colapinto</h3></div>
+<div class="card"><h3>Alexander Albon</h3></div>
+<div class="card"><h3>Carlos Sainz</h3></div>
+<div class="card"><h3>Liam Lawson</h3></div>
+<div class="card"><h3>Arvid Lindblad</h3></div>
+<div class="card"><h3>Nico Hülkenberg</h3></div>
+<div class="card"><h3>Gabriel Bortoleto</h3></div>
+<div class="card"><h3>Esteban Ocon</h3></div>
+<div class="card"><h3>Oliver Bearman</h3></div>
+<div class="card"><h3>Sergio Pérez</h3></div>
+<div class="card"><h3>Valtteri Bottas</h3></div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- QUIZ -->
+<!-- ========================= -->
+
+<section id="quiz" class="section">
+
+<h2 class="section-title">
+
+F1 <span>Quiz</span>
+
+</h2>
+
+<p class="section-description">
+
+Coming Soon...
+
+Test your Formula 1 knowledge with
+interactive quizzes.
+
+</p>
+
+</section>
+
+<!-- ========================= -->
+<!-- FOOTER -->
+<!-- ========================= -->
+
+<footer>
+
+<h2>
+
+F1 Academy
+
+</h2>
+
+<p>
+
+Learn Formula 1 from beginner
+to expert.
+
+</p>
+
+<p>
+
+© 2026 F1 Academy.
+All Rights Reserved.
+
+</p>
+
+</footer>
+
+<script src="./src/carParts.js"></script>
+<script src="./src/main.js"></script>
+
+</body>
+
 </html>
