@@ -612,20 +612,22 @@ margin-bottom:70px;
   =========================== */
   
   .part-card{
-  
-  width:380px;
-  
-  background:#111;
-  
-  padding:35px;
-  
-  border-radius:18px;
-  
-  border:1px solid #222;
-  
-  box-shadow:0 15px 35px rgba(0,0,0,.30);
-  
-  }
+
+    width:380px;
+    height:auto;
+    overflow:visible;
+    
+    background:#111;
+    
+    padding:35px;
+    
+    border-radius:18px;
+    
+    border:1px solid #222;
+    
+    box-shadow:0 15px 35px rgba(0,0,0,.30);
+    
+    }
   
   .part-card h2{
   
@@ -1047,7 +1049,35 @@ img{
   color:white;
   
   }
-  
+  .part-buttons{
+    position:relative;
+    z-index:10;
+}
+
+.part-buttons button{
+    display:block;
+    background:#e10600;
+    color:white;
+    border:none;
+    padding:14px;
+    width:100%;
+    cursor:pointer;
+}
+
+.part-buttons{
+  display:grid !important;
+  visibility:visible !important;
+  opacity:1 !important;
+}
+
+.part-buttons button{
+  display:block !important;
+  visibility:visible !important;
+  opacity:1 !important;
+  background:red !important;
+  color:white !important;
+}
+
   /* ===========================
      END OF FILE
   =========================== */
