@@ -1,140 +1,100 @@
-import "./style.css";
-import carImage from "./image/F1CarAnatomy.jpeg";
-import { parts } from "./carParts.js";
+// ========================================
+// F1 ACADEMY V2
+// MAIN.JS
+// ========================================
 
-document.querySelector("#app").innerHTML = `
-<nav>
-<div class="logo">🏎️ F1 Academy</div>
+document.addEventListener("DOMContentLoaded", () => {
 
-<ul>
-<li><a href="#">Home</a></li>
-<li><a href="#car">Car Anatomy</a></li>
-</ul>
-</nav>
+  console.log("F1 Academy Loaded!");
 
-<section class="hero">
-<h1>MASTER FORMULA 1</h1>
-<p>Click the buttons below to learn about every important part of an F1 car.</p>
-</section>
+  // ==========================
+  // Smooth Scroll
+  // ==========================
 
-<section id="car" class="anatomy">
+  document.querySelectorAll("[data-scroll]").forEach(button => {
 
-<h2>Interactive Car Anatomy</h2>
+      button.addEventListener("click", (e) => {
 
-<img src="${carImage}" class="car-image">
+          e.preventDefault();
 
-<div class="part-buttons">
+          const section = document.getElementById(
+              button.dataset.scroll
+          );
 
-<button onclick="showPart('mguk')">MGU-K</button>
-<button onclick="showPart('mguh')">MGU-H</button>
-<button onclick="showPart('exhaust')">Exhaust</button>
-<button onclick="showPart('chassis')">Monocoque</button>
-<button onclick="showPart('fuel')">Fuel Cell</button>
-<button onclick="showPart('wheels')">Wheels</button>
-<button onclick="showPart('frontWing')">Front Wing</button>
-<button onclick="showPart('nose')">Nose</button>
-<button onclick="showPart('halo')">Halo</button>
-<button onclick="showPart('steering')">Steering</button>
-<button onclick="showPart('airbox')">Air Intake</button>
-<button onclick="showPart('sidepods')">Sidepods</button>
-<button onclick="showPart('radiators')">Radiators</button>
-<button onclick="showPart('engine')">Power Unit</button>
-<button onclick="showPart('turbo')">Turbo</button>
-<button onclick="showPart('battery')">Battery</button>
-<button onclick="showPart('gearbox')">Gearbox</button>
-<button onclick="showPart('floor')">Floor</button>
-<button onclick="showPart('diffuser')">Diffuser</button>
-<button onclick="showPart('rearWing')">Rear Wing</button>
-<button onclick="showPart('drs')">DRS</button>
-<button onclick="showPart('suspension')">Suspension</button>
-<button onclick="showPart('brakes')">Brakes</button>
-<button onclick="showPart('brakeDucts')">Brake Ducts</button>
-<button onclick="showPart('tyres')">Tyres</button>
+          if(section){
 
-</div>
+              section.scrollIntoView({
 
-<div class="info-box">
+                  behavior:"smooth",
+                  block:"start"
 
-<h2 id="title">Click Any Part</h2>
+              });
 
-<p><strong>Function:</strong></p>
-<p id="function"></p>
+          }
 
-<br>
+      });
 
-<p><strong>Material:</strong></p>
-<p id="material"></p>
+  });
 
-<br>
+  // ==========================
+  // Navbar Shadow
+  // ==========================
 
-<p><strong>Location:</strong></p>
-<p id="location"></p>
+  const navbar = document.querySelector(".navbar");
 
-<br>
+  window.addEventListener("scroll",()=>{
 
-<p><strong>Fun Fact:</strong></p>
-<p id="fact"></p>
+      if(window.scrollY > 40){
 
-</div>
+          navbar.style.boxShadow =
+          "0 10px 25px rgba(0,0,0,.35)";
 
-</section>
-`;
+      }
 
-window.showPart = function(name){
+      else{
 
-const part = parts[name];
-parts.mguk = {
-  title:"MGU-K",
-  function:"Recovers energy during braking and provides extra power.",
-  material:"Hybrid Electric Motor",
-  location:"Power Unit",
-  fact:"Can add about 160 horsepower."
-  };
-  
-  parts.mguh = {
-  title:"MGU-H",
-  function:"Recovers energy from the turbocharger.",
-  material:"Electric Motor",
-  location:"Turbocharger",
-  fact:"Only Formula 1 uses this technology."
-  };
-  
-  parts.exhaust = {
-  title:"Exhaust",
-  function:"Releases gases from the engine.",
-  material:"Titanium",
-  location:"Rear",
-  fact:"Temperatures can exceed 900°C."
-  };
-  
-  parts.chassis = {
-  title:"Monocoque",
-  function:"Protects the driver and supports every component.",
-  material:"Carbon Fiber",
-  location:"Center",
-  fact:"The monocoque is incredibly strong yet very light."
-  };
-  
-  parts.fuel = {
-  title:"Fuel Cell",
-  function:"Stores the race fuel safely.",
-  material:"Kevlar Reinforced Rubber",
-  location:"Behind Driver",
-  fact:"Holds around 110 kg of fuel."
-  };
-  
-  parts.wheels = {
-  title:"Wheels",
-  function:"Hold the tyres and transfer power to the track.",
-  material:"Magnesium Alloy",
-  location:"Four Corners",
-  fact:"Formula 1 uses forged magnesium wheels."
-  };
+          navbar.style.boxShadow =
+          "none";
 
-document.getElementById("title").textContent = part.title;
-document.getElementById("function").textContent = part.function;
-document.getElementById("material").textContent = part.material;
-document.getElementById("location").textContent = part.location;
-document.getElementById("fact").textContent = part.fact;
+      }
 
-};
+  });
+
+  // ==========================
+  // Fade In Sections
+  // ==========================
+
+  const sections =
+  document.querySelectorAll(".section");
+
+  const observer =
+  new IntersectionObserver((entries)=>{
+
+      entries.forEach(entry=>{
+
+          if(entry.isIntersecting){
+
+              entry.target.style.opacity="1";
+              entry.target.style.transform="translateY(0px)";
+
+          }
+
+      });
+
+  },{
+
+      threshold:0.15
+
+  });
+
+  sections.forEach(section=>{
+
+      section.style.opacity="0";
+      section.style.transform="translateY(40px)";
+      section.style.transition=".7s";
+
+      observer.observe(section);
+
+  });
+
+});
